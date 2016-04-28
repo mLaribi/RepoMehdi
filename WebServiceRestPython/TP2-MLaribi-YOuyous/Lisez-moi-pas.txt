@@ -1,0 +1,15 @@
+Implémentation non fonctionnelle :
+
+-Recherche, aucun des critères ne semblait fonctionner, le code est écrit.
+un des problèmes était un IF qui ne marchait pas et retournait toujours False en comparant deux strings...
+j'ai essayer .equals, .encode, ==, str(string1) == str(string). j'ai failli comparer en bouclant sur les caractères
+
+
+-Insensibilité à la casse et ignore les espaces non implémentées
+
+- Le client ne marche pas. Les tests sont faits (écrits), mais non testés en exécutant.
+Erreur retournée : ImportError : No module found _winReg
+
+- Service web hébérgé sur : http://tp2-ws-ml-yo.appspot.com
+
+- Toutes les requetes, mis a part le get avec des contraintes, fonctionnent. (Incluant get jeux by id) testés avec POSTMAN

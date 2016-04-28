@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MagasinJouetsModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Commandes">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dateCommande" Type="date" Nullable="false" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="pseudo" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetailsCommandes">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noCommande" Type="int" Nullable="false" />
+          <Property Name="idSki" Type="int" Nullable="false" />
+          <Property Name="qte" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Skis">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pseudo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="photo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dateFabrication" Type="date" Nullable="false" />
+          <Property Name="details" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="prix" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usagers">
+          <Key>
+            <PropertyRef Name="pseudo" />
+          </Key>
+          <Property Name="pseudo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="motPasse" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="type" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="prenom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="adresse" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="ville" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="codePostal" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="téléphone" Type="nchar" MaxLength="14" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Commandes_Commandes">
+          <End Role="Usagers" Type="Self.Usagers" Multiplicity="1" />
+          <End Role="Commandes" Type="Self.Commandes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usagers">
+              <PropertyRef Name="pseudo" />
+            </Principal>
+            <Dependent Role="Commandes">
+              <PropertyRef Name="pseudo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetailsCommandes_Commandes">
+          <End Role="Commandes" Type="Self.Commandes" Multiplicity="1" />
+          <End Role="DetailsCommandes" Type="Self.DetailsCommandes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Commandes">
+              <PropertyRef Name="no" />
+            </Principal>
+            <Dependent Role="DetailsCommandes">
+              <PropertyRef Name="noCommande" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetailsCommandes_Skis">
+          <End Role="Skis" Type="Self.Skis" Multiplicity="1" />
+          <End Role="DetailsCommandes" Type="Self.DetailsCommandes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Skis">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetailsCommandes">
+              <PropertyRef Name="idSki" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Skis_Skis">
+          <End Role="Usagers" Type="Self.Usagers" Multiplicity="1" />
+          <End Role="Skis" Type="Self.Skis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usagers">
+              <PropertyRef Name="pseudo" />
+            </Principal>
+            <Dependent Role="Skis">
+              <PropertyRef Name="pseudo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MagasinJouetsModel1StoreContainer">
+          <EntitySet Name="Commandes" EntityType="Self.Commandes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetailsCommandes" EntityType="Self.DetailsCommandes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Skis" EntityType="Self.Skis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usagers" EntityType="Self.Usagers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Commandes_Commandes" Association="Self.FK_Commandes_Commandes">
+            <End Role="Usagers" EntitySet="Usagers" />
+            <End Role="Commandes" EntitySet="Commandes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetailsCommandes_Commandes" Association="Self.FK_DetailsCommandes_Commandes">
+            <End Role="Commandes" EntitySet="Commandes" />
+            <End Role="DetailsCommandes" EntitySet="DetailsCommandes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetailsCommandes_Skis" Association="Self.FK_DetailsCommandes_Skis">
+            <End Role="Skis" EntitySet="Skis" />
+            <End Role="DetailsCommandes" EntitySet="DetailsCommandes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Skis_Skis" Association="Self.FK_Skis_Skis">
+            <End Role="Usagers" EntitySet="Usagers" />
+            <End Role="Skis" EntitySet="Skis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MagasinJouetsModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Commandes">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dateCommande" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="pseudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Usagers" Relationship="Self.FK_Commandes_Commandes" FromRole="Commandes" ToRole="Usagers" />
+          <NavigationProperty Name="DetailsCommandes" Relationship="Self.FK_DetailsCommandes_Commandes" FromRole="Commandes" ToRole="DetailsCommandes" />
+        </EntityType>
+        <EntityType Name="DetailsCommandes">
+          <Key>
+            <PropertyRef Name="no" />
+          </Key>
+          <Property Name="no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noCommande" Type="Int32" Nullable="false" />
+          <Property Name="idSki" Type="Int32" Nullable="false" />
+          <Property Name="qte" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Commandes" Relationship="Self.FK_DetailsCommandes_Commandes" FromRole="DetailsCommandes" ToRole="Commandes" />
+          <NavigationProperty Name="Skis" Relationship="Self.FK_DetailsCommandes_Skis" FromRole="DetailsCommandes" ToRole="Skis" />
+        </EntityType>
+        <EntityType Name="Skis">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pseudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dateFabrication" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="details" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prix" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <NavigationProperty Name="DetailsCommandes" Relationship="Self.FK_DetailsCommandes_Skis" FromRole="Skis" ToRole="DetailsCommandes" />
+          <NavigationProperty Name="Usagers" Relationship="Self.FK_Skis_Skis" FromRole="Skis" ToRole="Usagers" />
+        </EntityType>
+        <EntityType Name="Usagers">
+          <Key>
+            <PropertyRef Name="pseudo" />
+          </Key>
+          <Property Name="pseudo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="motPasse" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adresse" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ville" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codePostal" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="téléphone" Type="String" MaxLength="14" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Commandes" Relationship="Self.FK_Commandes_Commandes" FromRole="Usagers" ToRole="Commandes" />
+          <NavigationProperty Name="Skis" Relationship="Self.FK_Skis_Skis" FromRole="Usagers" ToRole="Skis" />
+        </EntityType>
+        <Association Name="FK_Commandes_Commandes">
+          <End Role="Usagers" Type="Self.Usagers" Multiplicity="1" />
+          <End Role="Commandes" Type="Self.Commandes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usagers">
+              <PropertyRef Name="pseudo" />
+            </Principal>
+            <Dependent Role="Commandes">
+              <PropertyRef Name="pseudo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetailsCommandes_Commandes">
+          <End Role="Commandes" Type="Self.Commandes" Multiplicity="1" />
+          <End Role="DetailsCommandes" Type="Self.DetailsCommandes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Commandes">
+              <PropertyRef Name="no" />
+            </Principal>
+            <Dependent Role="DetailsCommandes">
+              <PropertyRef Name="noCommande" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetailsCommandes_Skis">
+          <End Role="Skis" Type="Self.Skis" Multiplicity="1" />
+          <End Role="DetailsCommandes" Type="Self.DetailsCommandes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Skis">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetailsCommandes">
+              <PropertyRef Name="idSki" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Skis_Skis">
+          <End Role="Usagers" Type="Self.Usagers" Multiplicity="1" />
+          <End Role="Skis" Type="Self.Skis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usagers">
+              <PropertyRef Name="pseudo" />
+            </Principal>
+            <Dependent Role="Skis">
+              <PropertyRef Name="pseudo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MagasinJouetsEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Commandes" EntityType="Self.Commandes" />
+          <EntitySet Name="DetailsCommandes" EntityType="Self.DetailsCommandes" />
+          <EntitySet Name="Skis" EntityType="Self.Skis" />
+          <EntitySet Name="Usagers" EntityType="Self.Usagers" />
+          <AssociationSet Name="FK_Commandes_Commandes" Association="Self.FK_Commandes_Commandes">
+            <End Role="Usagers" EntitySet="Usagers" />
+            <End Role="Commandes" EntitySet="Commandes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetailsCommandes_Commandes" Association="Self.FK_DetailsCommandes_Commandes">
+            <End Role="Commandes" EntitySet="Commandes" />
+            <End Role="DetailsCommandes" EntitySet="DetailsCommandes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetailsCommandes_Skis" Association="Self.FK_DetailsCommandes_Skis">
+            <End Role="Skis" EntitySet="Skis" />
+            <End Role="DetailsCommandes" EntitySet="DetailsCommandes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Skis_Skis" Association="Self.FK_Skis_Skis">
+            <End Role="Usagers" EntitySet="Usagers" />
+            <End Role="Skis" EntitySet="Skis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MagasinJouetsModel1StoreContainer" CdmEntityContainer="MagasinJouetsEntities1">
+          <EntitySetMapping Name="Commandes">
+            <EntityTypeMapping TypeName="MagasinJouetsModel1.Commandes">
+              <MappingFragment StoreEntitySet="Commandes">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="dateCommande" ColumnName="dateCommande" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="pseudo" ColumnName="pseudo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailsCommandes">
+            <EntityTypeMapping TypeName="MagasinJouetsModel1.DetailsCommandes">
+              <MappingFragment StoreEntitySet="DetailsCommandes">
+                <ScalarProperty Name="no" ColumnName="no" />
+                <ScalarProperty Name="noCommande" ColumnName="noCommande" />
+                <ScalarProperty Name="idSki" ColumnName="idSki" />
+                <ScalarProperty Name="qte" ColumnName="qte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Skis">
+            <EntityTypeMapping TypeName="MagasinJouetsModel1.Skis">
+              <MappingFragment StoreEntitySet="Skis">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pseudo" ColumnName="pseudo" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="dateFabrication" ColumnName="dateFabrication" />
+                <ScalarProperty Name="details" ColumnName="details" />
+                <ScalarProperty Name="prix" ColumnName="prix" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usagers">
+            <EntityTypeMapping TypeName="MagasinJouetsModel1.Usagers">
+              <MappingFragment StoreEntitySet="Usagers">
+                <ScalarProperty Name="pseudo" ColumnName="pseudo" />
+                <ScalarProperty Name="motPasse" ColumnName="motPasse" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="adresse" ColumnName="adresse" />
+                <ScalarProperty Name="ville" ColumnName="ville" />
+                <ScalarProperty Name="codePostal" ColumnName="codePostal" />
+                <ScalarProperty Name="téléphone" ColumnName="téléphone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

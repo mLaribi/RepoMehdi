@@ -1,0 +1,175 @@
+html {
+    overflow-y:scroll;
+}
+body
+{
+	font-family:Arial, Times, serif;
+	color:black;
+	background: url(images/fondPR.jpg) no-repeat top left;
+    background-size:cover;
+    margin:auto;
+    min-height:300px;
+    height:100%;
+    width:850px;
+    border: 2px solid black;
+
+   
+}
+#header {
+    height:100%;
+    width: inherit;
+}
+h1
+{
+	font-weight: bold;
+	font-size:1.3em;
+	font-style: italic;
+	color:navy;
+	text-align:center;
+    padding:6px;
+}
+#general {
+
+    margin-top: 0px;
+    width:inherit;
+    min-height: 300px;
+    background-color : grey;
+
+}
+
+#logo {
+    
+    padding-top:10px;
+    padding-left: 20px;
+    width: 150px;
+    height: 100px;
+    float: left;
+    border-radius: 10px;
+}
+
+#connexionDiv, #usagerConnecte
+{
+    font-size: 12px;
+    float:right;
+    width:auto;
+    height:auto;
+    background-color:#c08b00;
+    margin: 5px 5px 5px 0px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+#logout{
+    float:right;
+    bottom: 10px;  
+}
+
+#photoProfil{
+
+    float:left;
+    background: url(images/profil.jpg) no-repeat top left;
+    width: 97px;
+    height:97px;
+    padding: 6px;
+}
+
+#infosConnecte{
+
+    float:right;
+    font-size: 13px;
+    font-family:Cambria;
+    width: auto;
+    height: auto;
+}
+.msg_erreur{
+    color:red;
+}
+.msg_valide{
+    color: green;
+}
+#monmenu {
+
+   padding-right: 20px;
+   border-radius: 2px;
+   float: right;
+   text-align:right;
+   background-image: url(images/nav-bg.png);
+   background-position:bottom;
+   height:25px;
+}
+
+#monmenu a 
+{
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration:none;
+    color:white;
+}
+
+    #monmenu li:hover {
+        background-color: #808080;
+    }
+
+#monmenu li
+{
+    background-color: #2a2a2a;
+    display:inline;
+    list-style-type:none;
+}
+
+#inscr{
+
+    text-decoration:none;
+    color: black;
+}
+
+#frmInscription
+{
+      height:100%;
+      padding: 10px 10px 10px 10px; 
+}
+
+#frmInscription Label
+{
+    display:inline-block;
+    width:200px;
+}
+
+#messagePost{
+
+}
+
+.titre{
+
+    font-weight: bold;
+	font-size:1.3em;
+	font-style: italic;
+	color:navy;
+	text-align: center;
+}
+.clear{
+    clear:both;
+}
+
+
+#EnConstruction{
+
+    background-image: url(images/index.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 800px;
+    padding: 10px 25px 10px 25px;
+    height: 450px;
+
+}
+#txtConstruction{
+    margin: auto;
+    width: 800px;
+    font-size: 25px;
+    float: right;
+    font-style: italic;
+    color: white;
+}

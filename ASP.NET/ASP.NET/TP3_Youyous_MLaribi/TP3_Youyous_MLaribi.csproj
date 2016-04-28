@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3DA87B7-2666-469A-8830-4BC912FE0370}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TP3_Youyous_MLaribi</RootNamespace>
+    <AssemblyName>TP3_Youyous_MLaribi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Acces.ascx" />
+    <Content Include="Accueil.aspx" />
+    <Content Include="Ajouter.aspx" />
+    <Content Include="App_Data\MagasinJouets.mdf" />
+    <Content Include="App_Data\MagasinJouets_log.ldf">
+      <DependentUpon>MagasinJouets.mdf</DependentUpon>
+    </Content>
+    <Content Include="Comparer.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\images\favicon.ico" />
+    <Content Include="css\images\fondPM.jpg" />
+    <Content Include="css\images\fondPR.jpg" />
+    <Content Include="css\images\index.jpg" />
+    <Content Include="css\images\logo.png" />
+    <Content Include="css\images\nav-bg.png" />
+    <Content Include="css\StyleAjouter.css" />
+    <Content Include="css\StyleMagasin.css" />
+    <Content Include="css\StylePanier.css" />
+    <Content Include="css\Styles.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\ajouter.png" />
+    <Content Include="images\fleche.gif" />
+    <Content Include="images\imgMoyennes\aldenteskis.jpg" />
+    <Content Include="images\imgMoyennes\behavedskis.jpg" />
+    <Content Include="images\imgMoyennes\cantikaskis.jpg" />
+    <Content Include="images\imgMoyennes\edolloskis.jpg" />
+    <Content Include="images\imgMoyennes\hellskis.jpg" />
+    <Content Include="images\imgMoyennes\ironskis.jpg" />
+    <Content Include="images\imgMoyennes\jahskis.jpg" />
+    <Content Include="images\imgMoyennes\k2skis.jpg" />
+    <Content Include="images\imgMoyennes\kennedyskis.jpg" />
+    <Content Include="images\imgMoyennes\luvskis.jpg" />
+    <Content Include="images\imgMoyennes\magicgskis.jpg" />
+    <Content Include="images\imgMoyennes\pinacleskis.jpg" />
+    <Content Include="images\imgMoyennes\remedyskis.jpg" />
+    <Content Include="images\imgMoyennes\somaski.jpg" />
+    <Content Include="images\imgMoyennes\thallskis.jpg" />
+    <Content Include="images\imgMoyennes\tstskis.jpg" />
+    <Content Include="images\imgMoyennes\zeroskis.jpg" />
+    <Content Include="images\imgPetites\aldenteskis.jpg" />
+    <Content Include="images\imgPetites\behavedskis.jpg" />
+    <Content Include="images\imgPetites\cantikaskis.jpg" />
+    <Content Include="images\imgPetites\edolloskis.jpg" />
+    <Content Include="images\imgPetites\hellskis.jpg" />
+    <Content Include="images\imgPetites\ironskis.jpg" />
+    <Content Include="images\imgPetites\jahskis.jpg" />
+    <Content Include="images\imgPetites\k2skis.jpg" />
+    <Content Include="images\imgPetites\kennedyskis.jpg" />
+    <Content Include="images\imgPetites\luvskis.jpg" />
+    <Content Include="images\imgPetites\magicgskis.jpg" />
+    <Content Include="images\imgPetites\pinacleskis.jpg" />
+    <Content Include="images\imgPetites\remedyskis.jpg" />
+    <Content Include="images\imgPetites\somaski.jpg" />
+    <Content Include="images\imgPetites\thallskis.jpg" />
+    <Content Include="images\imgPetites\tstskis.jpg" />
+    <Content Include="images\imgPetites\zeroskis.jpg" />
+    <Content Include="images\supprimer.png" />
+    <Content Include="Inscription.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="Panier.aspx" />
+    <Content Include="Profil.aspx" />
+    <Content Include="RelevePaie.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Skis.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acces.ascx.cs">
+      <DependentUpon>Acces.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acces.ascx.designer.cs">
+      <DependentUpon>Acces.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Accueil.aspx.cs">
+      <DependentUpon>Accueil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accueil.aspx.designer.cs">
+      <DependentUpon>Accueil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter.aspx.cs">
+      <DependentUpon>Ajouter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajouter.aspx.designer.cs">
+      <DependentUpon>Ajouter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Commandes.cs">
+      <DependentUpon>ModelBdSkis.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comparer.aspx.cs">
+      <DependentUpon>Comparer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comparer.aspx.designer.cs">
+      <DependentUpon>Comparer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsCommandes.cs">
+      <DependentUpon>ModelBdSkis.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GabGeneral.Master.cs">
+      <DependentUpon>GabGeneral.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GabGeneral.Master.designer.cs">
+      <DependentUpon>GabGeneral.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Inscription.aspx.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscription.aspx.designer.cs">
+      <DependentUpon>Inscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBdSkis.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBdSkis.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBdSkis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBdSkis.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBdSkis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelBdSkis.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Panier.aspx.cs">
+      <DependentUpon>Panier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Panier.aspx.designer.cs">
+      <DependentUpon>Panier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.aspx.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profil.aspx.designer.cs">
+      <DependentUpon>Profil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelevePaie.aspx.cs">
+      <DependentUpon>RelevePaie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelevePaie.aspx.designer.cs">
+      <DependentUpon>RelevePaie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Skis.aspx.cs">
+      <DependentUpon>Skis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Skis.aspx.designer.cs">
+      <DependentUpon>Skis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Skis.cs">
+      <DependentUpon>ModelBdSkis.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usagers.cs">
+      <DependentUpon>ModelBdSkis.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GabGeneral.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="ModelBdSkis.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelBdSkis.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ModelBdSkis.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBdSkis.edmx</DependentUpon>
+      <LastGenOutput>ModelBdSkis.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelBdSkis.edmx.diagram">
+      <DependentUpon>ModelBdSkis.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModelBdSkis.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelBdSkis.edmx</DependentUpon>
+      <LastGenOutput>ModelBdSkis.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57558</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57558/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

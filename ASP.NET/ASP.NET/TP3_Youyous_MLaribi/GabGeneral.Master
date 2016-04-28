@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GabGeneral.Master.cs" Inherits="TP3_Youyous_MLaribi.gabGeneral" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <link href="css/Styles.css" rel="Stylesheet" type="text/css" />
+    <link href="css/StyleMagasin.css" rel="Stylesheet" type="text/css" />
+    <link href="css/StylePanier.css" rel="Stylesheet" type="text/css" />
+    <link href="css/StyleAjouter.css" rel="Stylesheet" type="text/css" />
+    <link href="css/images/favicon.ico" rel="icon" />
+     <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+
+    <div id="general">
+        <form id="frmConnexion" runat="server" method="post">
+        
+            <div id="Header">
+    <%--logo --%>
+            <a href="Accueil.aspx"><img src="css/images/logo.png" alt="logo" id="logo"/></a>
+               
+     <%--      Formulaire de connexion--%>
+
+        <div runat="server" id="connexionDiv">
+      
+          
+    <div>
+        <asp:Label ID="nomUtil" runat="server" Text="Pseudo: " AssociatedControlID="txtUsager"></asp:Label>
+        <asp:TextBox ID="txtUsager"  runat="server" CssClass="txt"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorNom" runat="server" ControlToValidate="txtUsager" CssClass="msg_erreur"
+           ValidationGroup="ValideConnect" ErrorMessage="Vous devez entrer le pseudo! ">*</asp:RequiredFieldValidator>
+    </div>
+    <div>
+        <asp:Label ID="mdpUtil" runat="server" Text="Mot de passe: " AssociatedControlID="txtMdp"></asp:Label>
+        <asp:TextBox ID="txtMdp" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidatorMdp" runat="server" ControlToValidate="txtMdp" CssClass="msg_erreur"
+           ValidationGroup="ValideConnect" ErrorMessage="Vous devez entrez le mot de passe">*</asp:RequiredFieldValidator>
+    </div>
+           
+    <div id="btn">
+        <asp:Button ID="btnSubmit" runat="server" Text="Se connecter" OnClick="btnSubmit_Click" ValidationGroup="ValideConnect" />
+    </div>
+        
+            
+            <asp:ValidationSummary ID="ValideConnexion" runat="server" ValidationGroup="ValideConnect"
+                CssClass="msg_erreur" HeaderText="Veuillez corriger les erreurs: " />
+      
+            
+              <div>
+            <a id="inscr" href="Inscription.aspx">S'inscrire</a>
+            <asp:Label ID="txtSouvenir" runat="server" Text ="  |  Se souvenir de moi" AssociatedControlID="SeSouvenir"></asp:Label>
+            <asp:CheckBox ID="SeSouvenir" runat="server" Checked="true"/>
+        </div>
+</div>
+
+                <div runat="server" id="usagerConnecte">
+                <div id="photoProfil"></div>
+
+                    <div id="infosConnecte">
+                <asp:Label ID="txtUsagerConnecte" runat="server"></asp:Label>
+                <asp:Label ID="txtDate" runat="server" Text=""></asp:Label>
+                    </div> 
+                    <div class="clear"></div>
+                    <asp:Button ID="logout" runat="server" Text="Se déconnecter" OnClick="logout_Click" />
+                </div>
+                <div class="clear"> </div>
+
+     <%-- Menu d'options --%>
+    <div id="header-bottom-menu">
+        <ul id="monmenu">
+            <li><a href="/Accueil.aspx">Accueil</a></li>
+            <li><a href="/Skis.aspx">Skis</a></li>
+            <li><a class="secInvite" href="/Comparer.aspx">Comparaison</a></li>
+            <li><a class="secInvite" href="/panier.aspx">Mon panier</a></li>
+            <li><a href="/profil.aspx">Modifier Profil</a></li>
+        </ul>
+        <div class="clear"> </div>
+    </div>
+ </div>
+           <%--      Contenu de la page--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderContenu" runat="server">
+       
+        </asp:ContentPlaceHolder>
+            <div class="clear"> </div>
+        </form>
+</div>        
+</body>
+</html>

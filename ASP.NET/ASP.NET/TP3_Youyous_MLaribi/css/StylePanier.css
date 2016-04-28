@@ -1,0 +1,52 @@
+﻿#logoPanier {
+    padding-left: 20px;
+    
+}
+
+#titre {
+    float:right;
+    color: black;
+    padding-right: 600px;
+}
+
+li {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+#articlesHeader {
+    background-color: #cccccc;
+    width: 750px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+#premier {
+    padding-left: 20px;
+}
+#articlesHeader td {
+    font-weight: bold;
+    padding-right: 80px;
+}
+
+#articleObjet td{
+    font-weight: bold;
+    padding-right: 155px;
+}
+
+#articleObjet a {
+    padding-left: 100px;
+}
+
+#sommaire ul{
+    float:left;
+    padding-right: 50px;
+}
+
+#sommaire {
+    padding-left: 20px;
+    height: 150px;
+}
+
