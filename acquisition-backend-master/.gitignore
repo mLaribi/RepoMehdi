@@ -1,0 +1,54 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+# External packages folder
+vendor/
+
+# VSCODE
+.vscode
+
+# MAC
+.DS_Store
+
+# Debug
+debug
+debug~
+debug.test
+
+# Main (compilé)
+main
+
+# Le dossier contenant les videos
+videos
+
+# SQL
+*.sql
+
+# TXT
+*.txt
+
+# Code coverage
+coverage
+coverage.out

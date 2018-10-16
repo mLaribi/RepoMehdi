@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/appNameColor"
+        android:textSize="@dimen/size_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblAppName"
+        android:id="@+id/lblAppName"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgFace"
+        android:layout_marginTop="85dp"
+        android:src="@drawable/ic_face_login"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_below="@+id/lblAppName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLock"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/ic_lock_password"
+        android:layout_below="@+id/imgFace"
+        android:layout_alignLeft="@+id/imgFace"
+        android:layout_alignStart="@+id/imgFace" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/placeHolderCompte"
+        android:ems="10"
+        android:id="@+id/txtNomDeCompte"
+        android:layout_above="@+id/imgLock"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/placeHolderMotDePasse"
+        android:ems="10"
+        android:id="@+id/txtPassword"
+        android:layout_alignTop="@+id/imgLock"
+        android:layout_alignLeft="@+id/txtNomDeCompte"
+        android:layout_alignStart="@+id/txtNomDeCompte" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnConnexion"
+        android:id="@+id/btnConnexion"
+        android:layout_below="@+id/txtPassword"
+        android:layout_alignLeft="@+id/txtPassword"
+        android:layout_alignStart="@+id/txtPassword"
+        android:layout_marginTop="36dp"
+        android:layout_alignRight="@+id/txtPassword"
+        android:layout_alignEnd="@+id/txtPassword"
+        android:onClick="btnConnexionClick" />
+
+    <TextView
+        android:onClick="lblInscriptionClick"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblInscription"
+        android:id="@+id/lblInscription"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/lblOublieMdp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:onClick="lblOublierMdpClick"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblOublieMotDePasse"
+        android:id="@+id/lblOublieMdp"
+        android:layout_below="@+id/btnConnexion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLogo"
+        android:src="@drawable/ic_grimpeur"
+        android:layout_below="@+id/lblInscription"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

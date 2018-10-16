@@ -1,0 +1,30 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+build
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+
+# Dist
+dist
+
+#vscode
+.vscode
+
+# Yarn
+yarn-error.log
+
+#Typings
+typings/*
+
+# Other
+Thumbs.db

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/appNameColor"
+        android:textSize="@dimen/size_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblInscriptionText"
+        android:id="@+id/lblInscriptionAjout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <EditText
+        android:background="@drawable/back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:hint="@string/placeHolderPrenom"
+        android:id="@+id/txtNomInscription"
+        android:layout_alignTop="@+id/txtNomFamilleInscription"
+        android:layout_alignLeft="@+id/txtNomCompteInscription"
+        android:layout_alignStart="@+id/txtNomCompteInscription" />
+    <EditText
+        android:background="@drawable/back"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:hint="@string/placeHolderNomFamille"
+        android:id="@+id/txtNomFamilleInscription"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/txtNomCompteInscription"
+        android:layout_alignRight="@+id/txtNomCompteInscription"
+        android:layout_alignEnd="@+id/txtNomCompteInscription" />
+
+    <EditText
+
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderCompte"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtNomCompteInscription"
+        android:layout_above="@+id/txtCourrielInscription"
+        android:layout_alignLeft="@+id/txtPasswordInscription"
+        android:layout_alignStart="@+id/txtPasswordInscription" />
+
+    <EditText
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderEmail"
+        android:paddingLeft="10dp"
+        android:id="@+id/txtCourrielInscription"
+        android:layout_above="@+id/txtPasswordInscription"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@+id/txtNomCompteInscription"
+        android:layout_alignStart="@+id/txtNomCompteInscription" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderMotDePasse"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtPasswordInscription"
+        android:layout_above="@+id/txtConfirmPassword"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderConfirmPassword"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtConfirmPassword"
+        android:layout_above="@+id/btnInscription"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnInscription"
+        android:id="@+id/btnInscription"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="BtnInscriptionOnClick" />
+
+</RelativeLayout>

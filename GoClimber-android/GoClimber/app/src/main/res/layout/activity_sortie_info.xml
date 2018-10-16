@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.youssef.goclimber.sortieInfo">
+
+
+    <TextView
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bloc"
+        android:id="@+id/txtSortieType"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="348 Avenue Rhéaume, G3M 1K1"
+        android:id="@+id/txtSortieLieu"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/txtSortieType"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06-10-2016"
+        android:id="@+id/txtSortieDate"
+        android:layout_below="@+id/txtSortieLieu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:textSize="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:30PM"
+        android:id="@+id/txtSortieHeure"
+        android:layout_below="@+id/txtSortieDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ceci est un commentaire, parfois je suis long et je dois prendre plusieurs lignes."
+        android:id="@+id/txtSortieCommentaire"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/txtSortieHeure"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plan"
+        android:id="@+id/btnPlan"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txtSortieCommentaire"
+        android:layout_alignEnd="@+id/txtSortieCommentaire"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="btnPlanClick" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mnu_archiver"
+        android:title="Accepter"
+        android:icon="@drawable/ic_delete" />
+    <item
+        android:id="@+id/mnu_modifVoie"
+        android:title="Modifier"
+        android:icon="@drawable/ic_settings" />
+
+</menu>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="@dimen/size_app_name"
+        android:textColor="@color/appNameColor"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblFicheParcours"
+        android:id="@+id/lblFicheParcours"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblPropoDifficulté"
+        android:id="@+id/lblProposer"
+        android:layout_below="@+id/ratingBarCritique"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/spinnerDiff"
+        android:layout_alignTop="@+id/lblProposer"
+        android:layout_toRightOf="@+id/lblProposer"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblVotreCritique"
+        android:id="@+id/lblCritique"
+        android:layout_below="@+id/ratingBarFicheParcours"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarCritique"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblFaconReussite"
+        android:id="@+id/lblFaconReussite"
+        android:layout_alignTop="@+id/spinnerReussite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/spinnerReussite"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignLeft="@+id/spinnerDiff"
+        android:layout_alignStart="@+id/spinnerDiff"
+        android:layout_alignRight="@+id/spinnerStyleVoie"
+        android:layout_alignEnd="@+id/spinnerStyleVoie" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:gravity="center_vertical|center_horizontal"
+    android:id="@+id/linearLayout">
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnReussir"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/lblFaconReussite"
+        android:layout_alignStart="@+id/lblFaconReussite"
+        android:onClick="btnReussirOnClick" />
+</LinearLayout>
+
+    <TextView
+        android:paddingTop="10dp"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLOC-V8-La voie facile"
+        android:id="@+id/txtDescripParcours"
+        android:layout_below="@+id/txtNomOuvreur"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rouge"
+        android:id="@+id/txtCouleurParcours"
+        android:layout_below="@+id/txtDescripParcours"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="18dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ouverture : 10/06/16"
+        android:id="@+id/txtDateOuvertureParcours"
+        android:layout_below="@+id/txtCouleurParcours"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="18dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom Ouvreur ici"
+        android:id="@+id/txtNomOuvreur"
+        android:layout_below="@+id/lblFicheParcours"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:isIndicator="true"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarFicheParcours"
+        android:layout_below="@+id/txtDateOuvertureParcours"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Style pour la voie"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/spinnerDiff"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerStyleVoie"
+        android:layout_below="@+id/spinnerDiff"
+        android:layout_alignLeft="@+id/spinnerDiff"
+        android:layout_alignStart="@+id/spinnerDiff"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

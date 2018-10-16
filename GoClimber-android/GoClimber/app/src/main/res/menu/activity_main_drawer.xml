@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Profile">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_account"
+                android:title="@string/hambProfile" />
+            <item
+                android:id="@+id/nav_modProfile"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/hambModifProf" />
+        </menu>
+    </item>
+
+    <item android:title="Parcours">
+        <menu>
+            <item
+                android:id="@+id/nav_trouverParcours"
+                android:icon="@drawable/ic_find"
+                android:title="@string/hambParcours" />
+            <item
+                android:id="@+id/nav_mesVoies"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/hambMesVoies" />
+        </menu>
+    </item>
+
+    <item android:title="Notifications">
+        <menu>
+            <item
+                android:id="@+id/nav_mesNotif"
+                android:icon="@drawable/ic_notification"
+                android:title="@string/hambNotif" />
+            <item
+                android:id="@+id/nav_paramNotif"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/hambParamNotif" />
+        </menu>
+    </item>
+
+    <item android:title="Nombres">
+        <menu>
+            <item
+                android:id="@+id/nav_classement"
+                android:icon="@drawable/ic_graph"
+                android:title="@string/hambStats" />
+            <item
+                android:id="@+id/nav_statistiques"
+                android:icon="@drawable/ic_graph"
+                android:title="Mes Stats" />
+        </menu>
+    </item>
+    <item android:title="Sorties">
+        <menu>
+            <item
+                android:id="@+id/nav_sorties"
+                android:icon="@drawable/ic_car"
+                android:title="@string/hambSorties"/>
+
+            <item
+                android:id="@+id/nav_CreeSorties"
+                android:icon="@drawable/ic_car"
+                android:title="@string/hambCreeSortie"/>
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_deco"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/hambDeco"/>
+        </menu>
+    </item>
+
+</menu>

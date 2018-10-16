@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:textColor="@color/appNameColor"
+        android:textSize="@dimen/size_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modifier"
+        android:id="@+id/lblInscriptionAjout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <EditText
+
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="NoTel"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtNumTelModif"
+        android:layout_above="@+id/txtAdresseModif"
+        android:layout_alignLeft="@+id/txtPasswordModif"
+        android:layout_alignStart="@+id/txtPasswordModif" />
+
+    <EditText
+
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderAdresse"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtAdresseModif"
+        android:layout_above="@+id/txtCourrielModif"
+        android:layout_alignLeft="@+id/txtPasswordModif"
+        android:layout_alignStart="@+id/txtPasswordModif" />
+
+    <EditText
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderEmail"
+        android:paddingLeft="10dp"
+        android:id="@+id/txtCourrielModif"
+        android:layout_above="@+id/txtPasswordModif"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@+id/txtAdresseModif"
+        android:layout_alignStart="@+id/txtAdresseModif" />
+
+    <EditText
+        android:inputType="textPassword"
+
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderMotDePasse"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtPasswordModif"
+        android:layout_above="@+id/txtConfirmPasswordModif"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:background="@drawable/back"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="@string/placeHolderConfirmPassword"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txtConfirmPasswordModif"
+        android:layout_above="@+id/btnModifier"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnModifier"
+        android:id="@+id/btnModifier"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="btnModifier" />
+
+</RelativeLayout>

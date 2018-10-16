@@ -1,0 +1,50 @@
+dependencies:
+  pre:
+    - pip install ansible
+    - pip install --upgrade setuptools
+  post:
+    - go get -u github.com/golang/lint/golint
+    - go build main.go
+
+test:
+  pre:
+      - go get github.com/mattn/goveralls
+  override:
+    - if [[ -n $(gofmt -l .) ]]; then echo "Please run gofmt"; exit 1; fi
+    - golint ./...
+    - go tool vet .
+    - go test -v -cover -coverprofile=/home/ubuntu/coverage.out ./api
+  post:
+    - /home/ubuntu/.go_workspace/bin/goveralls -coverprofile=/home/ubuntu/coverage.out -service=circle-ci -repotoken=$COVERALLS_TOKEN
+
+database:
+  override:
+    - createdb tsap_acquisition
+
+machine:
+  python:
+    version: 2.7.10
+
+  services:
+    - postgresql
+
+  # Add some environment variables
+  environment:
+    TSAP_DATABASEDRIVER: "postgres"
+    TSAP_CONNECTIONSTRING: "host=localhost user=postgres dbname=tsap_acquisition sslmode=disable password="
+    TSAP_PORT: ":3000"
+    TSAP_DEBUG: "true"
+    COVERALLS_TOKEN: "N7eNnjlrcfuhXXFORqzga8SDgV3qbMKYA"
+    KEYS_WEATHER: "1e471424e05991d2f9ed9e39b9749ae0"
+    KEYS_GEODECODER: "gCVEOBYTObcAaHsG5MXE3Uy0PF1kgkg0"
+    KEYS_JWT: "aind9wd98h#$*@*!29dh29h"
+
+general:
+  artifacts:
+    - "acquisition-backend"
+
+deployment:  
+  prod:
+    branch: master
+    commands:
+      - ansible-playbook deployment/deploy.yml -i deployment/vars

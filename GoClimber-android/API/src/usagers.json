@@ -1,0 +1,32 @@
+{
+    "Data": {
+        "Usager": [
+            {
+                "id": "1",
+                "nomUsager": "usagerTest",
+                "mdp": "test1",
+                "prenom": "Youssef",
+                "nom": "Ouyous",
+                "courriel": "youssefouyous@gmail.com",
+                "typeUtil": "Ouvreur",
+                "adresse": "348 Av. Rhéaume Donnacona",
+                "noTel": "418-997-3947",
+                "digest": "testDigest",
+                "token": "testToken"
+            },
+            {
+                "id": "2",
+                "nomUsager": "usagerTest2",
+                "mdp": "test2",
+                "prenom": "Mehdi",
+                "nom": "Laribi",
+                "courriel": "mlaribi@gmail.com",
+                "typeUtil": "Grimpeur",
+                "adresse": "348 Av. Rhéaume Québec",
+                "noTel": "911",
+                "digest": "testDigestMehdi",
+                "token": "testTokenMehdi"
+            }
+        ]
+    }
+}

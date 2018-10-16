@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">GoClimber</string>
+    <string name="lblAppName">GoClimber</string>
+    <string name="placeHolderCompte">Nom de compte</string>
+    <string name="btnConnexion">Connexion</string>
+    <string name="lblInscription">Rejoignez la communauté! C\'est gratuit.</string>
+    <string name="lblOublieMotDePasse">Mot de passe oublié ?</string>
+    <string name="lblInscriptionText">Inscription</string>
+    <string name="placeHolderPrenom">Prénom</string>
+    <string name="placeHolderNomFamille">Nom de famille</string>
+    <string name="placeHolderEmail">Courriel</string>
+    <string name="placeHolderMotDePasse">Mot de passe</string>
+    <string name="placeHolderConfirmPassword">Confirmation mot de passe</string>
+    <string name="placeHolderUsername">Nom D\'Usager</string>
+    <string name="btnInscription">Inscription</string>
+
+    <string name="PrenomUsager">Youssef</string>
+    <string name="NomUsager">Ouyous</string>
+    <string name="lblClassement">Classement :</string>
+    <string name="lblMesPoints">Mes Points</string>
+    <string name="lblDernierParcours">Mes derniers parcours réussi</string>
+    <string name="AffClassement">10</string>
+
+    <string name="txtParcoursDispoBloc">Blocs Disponibles</string>
+    <string name="txtParcoursDispoVoie">Voies Disponibles</string>
+    <string name="btnFiltrer">Filtrer</string>
+    <string name="lblInfo">Informations</string>
+    <string name="lblCritique">Critique :</string>
+    <string name="btnGrimper">Grimper !</string>
+
+
+    <string name="lblFicheParcours">Fiche de parcours</string>
+    <string name="lblPropoDifficulté">Proposer une difficulté</string>
+    <string name="lblVotreCritique">Votre critique</string>
+    <string name="lblFaconReussite">Façon de réussite</string>
+    <string name="btnAbandonner">Abandonner</string>
+    <string name="btnReussir">Réussir</string>
+
+    <string-array name="arrDernierParcours">
+        <item>BLOC - V6 - Par J-S Dufour</item>
+        <item>VOIE - 5.13A - Par Nick Richard</item>
+        <item>BLOC - V0 - Par Youssef Ouyous</item>
+        <item>VOIE - 5.13B - Par Mehdi Laribi</item>
+        <item>BLOC - V5 - Par Martin Vézina</item>
+        <item>BLOC - V6 - Par J-S Dufour</item>
+        <item>VOIE - 5.13A - Par Nick Richard</item>
+    </string-array>
+
+    <string-array name="tabsType">
+        <item>Blocs</item>
+        <item>Voies</item>
+    </string-array>
+
+    <string-array name="arrDiffVoie">
+        <item>5.12b</item>
+        <item>5.12c</item>
+        <item>5.12d</item>
+        <item>5.13a</item>
+        <item>5.13b</item>
+        <item>5.13c </item>
+        <item>5.13d</item>
+        <item>5.14a</item>
+    </string-array>
+
+    <string-array name="arrDiffBloc">
+        <item>V4</item>
+        <item>V5</item>
+        <item>V6</item>
+        <item>V7</item>
+        <item>V8</item>
+        <item>V9</item>
+        <item>V10</item>
+        <item>V11</item>
+    </string-array>
+
+    <string-array name="arrFaconReussite">
+        <item>À vue</item>
+        <item>Flash</item>
+        <item>Après travail</item>
+    </string-array>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_mon_plan">Mon plan</string>
+
+    <string name="navigation_drawer_open">Ouvrir navigation</string>
+    <string name="navigation_drawer_close">Fermer navigation</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hambProfile">Votre profil</string>
+    <string name="hambModifProf">Modifier Profil</string>
+    <string name="hambStats">Classement</string>
+    <string name="hambParcours">Trouver un parcours</string>
+    <string name="hambNotif">Notifications</string>
+    <string name="hambParamNotif">Paramètres de notifications</string>
+    <string name="hambSorties">Mes sorties</string>
+    <string name="hambMesVoies">Mes parcours</string>
+    <string name="hambDeco">Déconnexion</string>
+    <string name="hambCreeSortie">Créer une sortie</string>
+
+    <string name="placeHolderAdresse">Adresse</string>
+    <string name="btnModifier">Modifier</string>
+    <string name="lblTitre">Créer une sortie</string>
+    <string name="lblDate">Date de la sortie :</string>
+    <string name="lblType">Type de parcours :</string>
+    <string name="lblLieu">Lieu de sortie :</string>
+    <string name="txtLieu">Lieu de la sortie</string>
+    <string name="btnEnvoyer">Envoyer</string>
+
+    <string name="imgGmap">imgGMap</string>
+    <string name="txtDepart">Départ</string>
+    <string name="txtDestination">Destination</string>
+    <string name="imgMapItin">Map</string>
+    <string name="txtEstimationTemps">Temps estimé :</string>
+    <string name="lblTitreGesVoies">Mes Parcours</string>
+    <string name="btnArchiverVB">Archiver</string>
+    <string name="txtNvVoie">Nouvelle voie</string>
+    <string name="imgAjVoie">ajoutVoie</string>
+    <string name="lblTypeGes">Type de voie :</string>
+    <string name="lblDifficulte">Difficulté :</string>
+    <string name="lblTempsArrive">14 min</string>
+    <string name="lblTitreClassement">Classement</string>
+    <string name="imgClassement">imgClassement</string>
+    <string name="lblCouleur">Couleur</string>
+    <string name="lblNotification">Notifications</string>
+    <string name="imgNotification">imgNotification</string>
+    <string name="btnModifierParcours">Modifier</string>
+    <string name="lblTitreAjout">Ajouter un parcours</string>
+    <string name="imgAjParcours">imgAjParcours</string>
+    <string name="txtNomParcour">Nom du parcours</string>
+    <string name="lblTypeParc">Type de parcours :</string>
+    <string name="lblDiff">Difficulté :</string>
+    <string name="btnAjoutParcours">Nouveau parcours</string>
+    <string name="lblCouleurs">Couleur du parcours :</string>
+    <string name="btnParcourir">Parcourir</string>
+    <string name="lblGym">Gym :</string>
+    <string name="btnCalend">BoutonCalendar</string>
+    <string name="txtCalend">__/__/__</string>
+    <string name="lblCalend">Date d\'ouverture :</string>
+    <string name="btnAnnulerAjout">Annuler</string>
+    <string name="btnAjouterParcours">Ajouter</string>
+    <string name="btnArchiverSelection">Archiver Selection</string>
+    <string name="btnModifSelectionVoie">Modifier Selection</string>
+
+    <string name="menuMonCentre">Changer de centre</string>
+    <string name="menu_edit">Modifier</string>
+    <string name="menu_delete">Archiver</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logoMap">GMapLogo</string>
+    <string name="title_activity_activite_map">Map</string>
+
+    <string-array name="tabsSorties">
+        <item>Blocs</item>
+        <item>Voies</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
